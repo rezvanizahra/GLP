@@ -20,7 +20,7 @@ from sklearn.metrics import precision_recall_fscore_support as score
 from sklearn.metrics import f1_score, accuracy_score, precision_score, recall_score
 
 
-
+os.environ['CUDA_VISIBLE_DEVICES'] = "0,1"
 
 class tow_stream_net(nn.Module):
     def __init__(self, pre_model, glp_model):
@@ -29,8 +29,8 @@ class tow_stream_net(nn.Module):
         self.pre_model = pre_model
         self.glp_model = glp_model
         
-        self.pre_model.eval()
-        self.glp_model.eval()
+        # self.pre_model.eval()
+        # self.glp_model.eval()
 
     def forward(self,x):
         out1 = self.pre_model(x)
@@ -152,7 +152,8 @@ def validate(val_loader, model):
 def train(model, train_loader, test_loader,device):
 
     criterion = nn.CrossEntropyLoss()
-    optimizer = optim.SGD(model.parameters(), lr=0.001, momentum=0.9)
+    optimizer = optim.SGD(filter(lambda p: p.requires_grad, model.parameters()), lr=0.001, momentum=0.9)
+    # optimizer = optim.SGD(model.parameters(), lr=0.001, momentum=0.9)
     min_valid_loss = np.inf
 
     for epoch in range(20):  # loop over the dataset multiple times
