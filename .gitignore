@@ -1,0 +1,11 @@
+ILSVRC2012_devkit_t12/
+__pycache__/
+bk_master/
+data/
+digrams/
+env_glp/
+output/
+results.csv
+results_resnet.csv
+resutls.csv
+torch_home/
