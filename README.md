@@ -36,7 +36,7 @@ To use this dataset:
 
 To train the model on your custom dataset, you could copy the dataset into `./data` directory or set the --dataroot argument. 
 
-## Training and Testing GAS netowrk:
+## Training and Testing:
 To list the training parameters, run the following command:
 ```
 python main.py -h
@@ -48,19 +48,6 @@ python main.py --dataset <dataset_name> --niter <number-of-epochs>
 ### To test the model on the Caltech101 dataset:
 ``` 
 python test.py --dataset <dataset_name> --load_weights                                                 
-```
-## Training and Testing GLP netowrk:
-To list the training parameters, run the following command:
-```
-python train_glp.py -h
-```
-### To train the model on the Caltech101 dataset:
-``` 
-python train_glp.py --dataset <dataset_name> --niter <number-of-epochs>                                                
-```
-### To test the model on the Caltech101 dataset:
-``` 
-python test_glp.py --dataset <dataset_name> --load_weights                                                 
 ```
 
 <!-- ## Citating Deep-Disaster
