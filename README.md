@@ -4,7 +4,8 @@
 
 This repository contains Pytorch implementation for training and evaluating of the following paper: 
 
-Global-Local Processing in Convolutional Neural Networks #[[1]](#6-reference)
+Global-Local Processing in Convolutional Neural Networks 
+<!-- [[1]](#6-reference) -->
 
 <!-- <img src="Images/Deep-Disaster_all-min.png" width="600" height ="400"/>   -->
 <!-- <img src="Images/Deep-Disaster_model_define-min.png" width="400" height="300"/> -->
