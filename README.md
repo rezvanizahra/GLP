@@ -43,19 +43,21 @@ python main.py -h
 ```
 ### To train the model:
 ``` 
-python main.py  --model <model_name>  --dataset <dataset_name> --epochs <number-of-epochs> --num_classes <number_of_classes> --add_smartfilter 
+python main.py  --model <model_name>  --dataset <dataset_name> --epochs <number-of-epochs> 
+                --num_classes <number_of_classes> --add_smartfilter 
 ```
 ### To test the model:
 ``` 
-python test.py  --model <model_name>  --dataset <dataset_name> --num_classes <number_of_classes>  --checkpoint_path  <path
-_to_checkpoint>                                            
+python test.py  --model <model_name>  --dataset <dataset_name> --num_classes <number_of_classes>  
+                --checkpoint_path  <path_to_checkpoint>                                            
 ```
 ### To test the model on attacks and save results in a .csv file:
 ``` 
-python test_on_attacks.py  --model <model_name>  --dataset <dataset_name> --num_classes <number_of_classes>  --checkpoint_path  <path
-_to_checkpoint>  --attack_method <FGSM | PGD>  --repeat_on_attacks <number-of_repeat> --save_csv <path_to_save_csv_file>                                    
+python test_on_attacks.py  --model <model_name>  --dataset <dataset_name> --num_classes <number_of_classes> 
+                          --checkpoint_path  <path_to_checkpoint>  --attack_method <FGSM | PGD>  
+                          --repeat_on_attacks <number-of_repeat> --save_csv <path_to_save_csv_file>                                    
 ```
-####note: 
+#### note: 
 To train and test GA-Resnet and GA-Inception you need to define the --gas-path which defined the path to the gas model checkpoints
 
 <!-- ## Citating Deep-Disaster
@@ -70,6 +72,6 @@ If you want to cite this work in your publication:
       primaryClass={cs.CV}
 }
 ``` -->
-## Reference
-<!-- [1] [Deep-Disaster: Unsupervised Disaster Detection and Localization Using Visual Data](https://arxiv.org/pdf/2202.00050.pdf). -->
+<!-- ## Reference -->
+<!-- [1] [). -->
 
