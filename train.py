@@ -1,3 +1,12 @@
+"""
+TRAIN GAS/GLP(GA-Resnet,GA-Inception)/Inceptionv3/Resnet18
+
+"""
+
+##
+# LIBRARIES
+
+
 import os
 import time
 import torch

@@ -8,6 +8,10 @@ GAS_fc_size = { 299:175232,  224:100352 }
 
 
 class GLP(nn.Module):
+    """
+    Global Local Processing Model
+    
+    """
     def __init__(self, opt, pre_model, gas_model):
         super().__init__()
 
@@ -33,6 +37,10 @@ class GLP(nn.Module):
 
 
 class GAS(nn.Module):
+    """
+    Global Advantage Stream Model
+
+    """
     def __init__(self,opt):
         super().__init__()
         self.pool = nn.MaxPool2d(2, 2)

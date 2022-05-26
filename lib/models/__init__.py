@@ -48,7 +48,7 @@ def load_glp(opt):
 
 
 def load_model(opt):
-    """ Load model based on the model name.
+    """ Load a model based on the model name.
     Arguments:
         opt {[argparse.Namespace]} -- options
        

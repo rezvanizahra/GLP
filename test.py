@@ -1,3 +1,14 @@
+"""
+TEST GAS/GLP(GA-Resnet,GA-Inception)/Inceptionv3/Resnet18
+
+Example: Run the following command from the terminal.
+    python test.py                                    \
+        --model GAS                                    \
+        --dataset caltech101                           \
+        --num_classes 101                              \
+        --checkpoint_path <path_to_checkpoint>
+
+"""
 
 import os
 import time

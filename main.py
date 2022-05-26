@@ -1,3 +1,15 @@
+"""
+TRAIN GAS/GLP(GA-Resnet,GA-Inception)/Inceptionv3/Resnet18
+
+Example: Run the following command from the terminal.
+    python train.py                                    \
+        --model GAS                                    \
+        --dataset caltech101                           \
+        --num_classes 101                              \
+        --add_smartfilter                              \
+
+   
+"""
 
 import os
 import time

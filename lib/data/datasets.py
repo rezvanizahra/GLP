@@ -101,7 +101,6 @@ class CustomDataset(data.Dataset):
 
 def load_Caltech101(root,train_transform,val_transform):
     image_paths = list(paths.list_images(root))
-    # print(image_paths)
 
     data = []
     labels = []
@@ -120,7 +119,6 @@ def load_Caltech101(root,train_transform,val_transform):
 
     lb = LabelEncoder()
     labels = lb.fit_transform(labels)
-    # print(lb.classes_)
     print(f"Total Number of Classes: {len(lb.classes_)}")
 
     # divide the data into train, validation, and test set
@@ -143,13 +141,7 @@ def load_test_Navon(root,val_transform):
     for img_path in tqdm(image_paths):
         label = img_path.split(os.path.sep)[-2]
         img = cv2.imread(img_path)
-
-        # img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-        # img = cv2.cvtColor(img,cv2.COLOR_RGB2GRAY)
-
-        
         
         data.append(img)
         labels.append(label)
@@ -173,7 +165,6 @@ def load_Navon(root,train_transform,val_transform):
         img = cv2.imread(img_path)
 
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-        # img = cv2.cvtColor(img,cv2.COLOR_RGB2GRAY)
 
         
         data.append(img)

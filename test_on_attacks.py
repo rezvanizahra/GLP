@@ -1,3 +1,18 @@
+"""
+TEST GLP(GA-Resnet,GA-Inception)/Inceptionv3/Resnet18 On Attacks
+
+Example: Run the following command from the terminal.
+    python test_on_attacks.py                          \
+        --model GA-Resnet                              \
+        --dataset caltech101                           \
+        --num_classes 101                              \
+        --checkpoint_path <path_to_checkpoint>         \
+        --attack_method <FGSM | PGD>                   \
+        --repeat_on_attacks <number-of_repeat>         \
+
+"""
+
+
 import os
 import time
 import torch
