@@ -1,0 +1,10 @@
+numpy==1.22.2
+opencv-python==4.5.5.64
+pandas==1.4.1
+scikit-learn==1.0.2
+scipy==1.6.0
+torch==1.10.2
+torchvision==0.11.3
+tqdm==4.62.3
+imutils==0.5.4
+cleverhans==4.0.0
