@@ -4,7 +4,7 @@
 
 This repository contains Pytorch implementation for training and evaluating of the following paper: 
 
-Global-Local Processing in Convolutional Neural Networks [[1]](#6-reference)
+Global-Local Processing in Convolutional Neural Networks #[[1]](#6-reference)
 
 <!-- <img src="Images/Deep-Disaster_all-min.png" width="600" height ="400"/>   -->
 <!-- <img src="Images/Deep-Disaster_model_define-min.png" width="400" height="300"/> -->
@@ -41,14 +41,22 @@ To list the training parameters, run the following command:
 ```
 python main.py -h
 ```
-### To train the model on the Caltech101 dataset:
+### To train the model:
 ``` 
-python main.py --dataset <dataset_name> --niter <number-of-epochs>                                                
+python main.py  --model <model_name>  --dataset <dataset_name> --epochs <number-of-epochs> --num_classes <number_of_classes> --add_smartfilter 
 ```
-### To test the model on the Caltech101 dataset:
+### To test the model:
 ``` 
-python test.py --dataset <dataset_name> --load_weights                                                 
+python test.py  --model <model_name>  --dataset <dataset_name> --num_classes <number_of_classes>  --checkpoint_path  <path
+_to_checkpoint>                                            
 ```
+### To test the model on attacks and save results in a .csv file:
+``` 
+python test_on_attacks.py  --model <model_name>  --dataset <dataset_name> --num_classes <number_of_classes>  --checkpoint_path  <path
+_to_checkpoint>  --attack_method <FGSM | PGD>  --repeat_on_attacks <number-of_repeat> --save_csv <path_to_save_csv_file>                                    
+```
+####note: 
+To train and test GA-Resnet and GA-Inception you need to define the --gas-path which defined the path to the gas model checkpoints
 
 <!-- ## Citating Deep-Disaster
 If you want to cite this work in your publication:
